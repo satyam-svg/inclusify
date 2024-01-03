@@ -18,7 +18,7 @@
         
         width: 10rem;
         height: 9.5rem;
-        object-fit: cover; /* Maintain aspect ratio while covering the container */
+        object-fit: cover; 
       }
       .content{
         margin-top: 1rem;
