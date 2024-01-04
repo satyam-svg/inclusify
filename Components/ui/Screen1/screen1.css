@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Poppins&display=swap');
 @media(max-width:600px){
     .screen1 {
-        
+        padding-left: 0.7rem;
          margin-top: 1rem;
       }
       .screen1 .screen1-items{
         display: flex;
         flex-direction: row-reverse;
+        gap: 1rem;
+        margin-top: 1rem;
       }
       .women-image {
         display: flex;
         justify-content: flex-end;
-        position: relative;
       }
       
       .stats {
@@ -21,10 +22,7 @@
         object-fit: cover; 
       }
       .content{
-        margin-top: 1rem;
-        margin-right: 1rem;
-        width: 50%;
-        height: 50%;
+        width: 60vw;
       }
       .content h1{
         font-size: 1.5rem;
@@ -38,12 +36,10 @@
       }
       .button{
         display: flex;
-        margin-left: 1.3rem;
-        margin-top: 1rem;
       }
       .button .button1{
         display: flex;
-        margin-left: 1rem;
+        
         width: 5.183rem;
         height: 2rem;
         border-radius: 0.5rem;
@@ -73,7 +69,6 @@
       }
       .label{
         display: flex;
-        margin-left: 2.2rem;
         margin-top: 1rem;
       }
       .label h1{
