@@ -37,6 +37,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'taggit',
+    'ckeditor',
+    'rest_framework',
+
+
+
+    'order',
+    'accounts',
+    'core',
+
+
 ]
 
 MIDDLEWARE = [
@@ -68,7 +79,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "backend.wsgi.application"
-
+AUTH_USER_MODEL='accounts.Account'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -121,3 +132,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
