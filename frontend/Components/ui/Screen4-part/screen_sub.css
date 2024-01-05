@@ -1,0 +1,90 @@
+@media(max-width:600px){
+.tag{
+    height: 4vh;
+    width: 40vw;
+    border: 1px solid rgba(95, 239, 101, 0.52);
+    background-color: rgba(95, 239, 101, 0.52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+}
+.Screen_part_items_subheading{
+    margin-left: 7rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.tag p{
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+.heading_screen4{
+    margin-left: 1.3rem;
+    color: white;
+    font-weight: bold;
+}
+.circles{
+    margin-left: 2.9rem;
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 1.6rem;
+}
+.circle1{
+    height: 5.25rem;
+    width: 5.25rem;
+    background-color: white;
+    border-radius: 8rem;
+}
+.time{
+    margin-left: 1rem;
+    margin-top: -0.9rem;
+}
+.content1 h1{
+   margin-left: 3.6rem;
+   margin-top: 0.3rem;
+   font-size: 0.875rem;
+   font-weight: bold;
+   color: white;
+   font-family: Poppins;
+}
+.content2 h1{
+   margin-left: 2.9rem;
+   margin-top: 0.3rem;
+   font-size: 0.875rem;
+   font-weight: bold;
+   color: white;
+   font-family: Poppins;
+}
+.content3 h1{
+   margin-left: 2rem;
+   margin-top: 0.3rem;
+   font-size: 0.875rem;
+   font-weight: bold;
+   color: white;
+   font-family: Poppins;
+}
+.content_screen4{
+    display: flex;
+}
+.content1 p{
+    font-size: 0.5rem;
+    width: 25vw;
+    margin-left: 2rem;
+    color: white;
+}
+.content2 p{
+    font-size: 0.5rem;
+    width: 26vw;
+    margin-left: 1rem;
+    color: white;
+}
+.content3 p{
+    font-size: 0.5rem;
+    width: 25vw;
+    margin-left: 1rem;
+
+    color: white;
+}
+}

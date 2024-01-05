@@ -1,0 +1,31 @@
+@media(max-width:600px){
+    .screen4{
+       
+        margin-top: 3rem;
+    }
+    .screen4-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    .box{
+        display: flex;
+        width: 93vw;
+        height: 18rem;
+        background-color: rgba(1, 20, 42, 0.74);
+        border-radius: 1rem;
+    }
+    .horizontal {
+        width: 2px; /* Adjust the thickness of the lines as needed */
+        height: 15.875rem; /* Adjust the height of the lines as needed */
+        background-color: rgba(132, 124, 124, 0.37); /* Adjust the color of the lines as needed */
+      }
+      
+      .lines{
+        display: flex;
+        gap: 3rem;
+        margin-left: 3rem;
+      }
+      
+      
+}
