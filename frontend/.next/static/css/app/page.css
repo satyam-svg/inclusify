@@ -312,3 +312,17 @@
     color: white;
 }
 }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./Components/ui/Screen5/screen5.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+@media(max-width:600px){
+    .content_screen5{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .content_screen5 .poor-image .poor{
+        width: 8.063rem;
+        height: 7rem;
+        border-radius: 1.438rem;
+    }
+}

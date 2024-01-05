@@ -1,0 +1,11 @@
+@media(max-width:600px){
+    .content_screen5{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .content_screen5 .poor-image .poor{
+        width: 8.063rem;
+        height: 7rem;
+        border-radius: 1.438rem;
+    }
+}
