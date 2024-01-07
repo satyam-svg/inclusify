@@ -1,18 +1,18 @@
 from .models import Account,UserProfile
 from rest_framework import serializers
 
-class AccountSerializers(serializers.Serializer):
-    first_name=serializers.CharField(max_length=50)
-    last_name=serializers.CharField(max_length=50)
-    username=serializers.CharField(max_length=50,unique=True)
-    email=serializers.EmailField(max_length=100,unique=True)
-    phone_number=serializers.CharField(max_length=50)
+class AccountSerializers(serializers.ModelSerializer):
+    class Meta:
+        model=Account
+        fields=['first_name','last_name','username','email','phone_number','password']
+        extra_kwargs={
+            'password':{'write_only':True}
+        }
 
-    #required
-    date_joined=serializers.DateTimeField(auto_now_add=True)
-    last_login=serializers.DateTimeField(auto_now_add=True)
-    is_admin=serializers.BooleanField(default=False)
-    is_staff=serializers.BooleanField(default=False)
-    is_active=serializers.BooleanField(default=False)
-    is_superadmin=serializers.BooleanField(default=False)
-    
+    def create(self, validated_data):
+        password=validated_data.pop('password',None)
+        instance=self.Meta.model(**validated_data)
+        if password is not None:
+            instance.set_password(password)
+        instance.save()
+        return instance
