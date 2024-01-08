@@ -3,6 +3,7 @@ import './screen1.css';
 import Women from './image/Screenshot 2023-12-28 230437.png';
 import Image from 'next/image';
 import Arrow from  './image/Arrow 1.png'
+import Link from 'next/link'
 import tick from './image/Ok.png'
 const Page = () => {
   return (
@@ -26,7 +27,7 @@ const Page = () => {
          <div className="button1">
            <h1>Get Started</h1>
          </div>
-         <h2><u>Donation Process</u></h2>
+         <h2><Link href="/login"><u>Donation Process</u></Link></h2>
          <Image
          src={Arrow}
          alt='arrow-image'
