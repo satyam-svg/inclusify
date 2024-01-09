@@ -21,7 +21,7 @@ const page = () => {
               <Image src={home} alt="loading-image" />
             </Link>
             <h1>/</h1>
-            <h2>Product</h2>
+           <Link href="/productlist"><h2>Product</h2></Link>
             <h3>/</h3>
             <h4>Add Product</h4>
           </div>
