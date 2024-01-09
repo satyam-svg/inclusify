@@ -4,6 +4,7 @@ import Image from "next/image";
 import Poor from "./Image/woman-offering-food-neighbor.jpg";
 import Arrow from "./Image/Arrow 1.png";
 import tick from "./Image/Ok.png";
+import Link from "next/link";
 const page = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const page = () => {
         </div>
         <div className="screen5_button">
          <div className="screen5_button1">
-         <h2><u>See Product</u></h2>
+         <h2><Link><u>See Product</u></Link></h2>
          <Image
          src={Arrow}
          alt='arrow-image'
@@ -32,7 +33,7 @@ const page = () => {
          className='arrow'
          />
          </div>
-         <h2 className="upload"><u>Upload Products</u></h2>
+         <h2 className="upload"><Link><u>Upload Products</u></Link></h2>
          <Image
          src={Arrow}
          alt='arrow-image'
