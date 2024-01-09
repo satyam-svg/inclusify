@@ -1,0 +1,202 @@
+
+@media(max-width:600px){
+    .add_product{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+   .addproduct_menu{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    gap: 1rem;
+   }
+   .addproduct_menu h2{
+    color: rgba(159, 159, 159, 1);
+    font-weight: bold;
+   }
+   .addproduct_menu h4{
+    color: rgba(0, 10, 255, 1);
+    font-weight: bold;
+   }
+   .heading_addproduct{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   }
+   .heading_addproduct h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+   }
+   .heading_addproduct h2{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(163, 163, 163, 1);
+   }
+   .imformation_form{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 92vw;
+    height: 45vh;
+    border: 1px solid rgba(192, 192, 192, 1);
+    border-radius: 2rem;
+   }
+   .price_form{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 92vw;
+    height: 30vh;
+    border: 1px solid rgba(192, 192, 192, 1);
+    border-radius: 2rem;
+   }
+   .image_form{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 92vw;
+    height: 22vh;
+    border: 1px solid rgba(192, 192, 192, 1);
+    border-radius: 2rem;
+   }
+   .imformation_form_items{
+    margin-top: 1rem;
+    margin-left: 2rem;
+   }
+   .image_form_items{
+    margin-top: 1rem;
+    margin-left: 2rem;
+   }
+   .price_form_items{
+    margin-top: 1rem;
+    margin-left: 2rem;
+   }
+   .imformation_form_heading{
+    display: flex;
+    gap: 8.4rem;
+
+   }
+   .image_form_heading{
+    display: flex;
+    gap: 8.4rem;
+
+   }
+   .price_form_heading{
+    display: flex;
+    gap: 8.4rem;
+
+   }
+   
+   .imformation_form_heading h1{
+       font-size: 1rem;
+       font-weight: 700;
+       width: 10rem;
+   }
+   .image_form_heading h1{
+       font-size: 1rem;
+       font-weight: 700;
+       width: 10rem;
+   }
+   .price_form_heading h1{
+       font-size: 1rem;
+       font-weight: 700;
+       width: 10rem;
+   }
+   .menuicon{
+    height: 4vh;
+    width: 14vw;
+   }
+   .imformation_form_box{
+    margin-top: 0.2rem;
+    width: 77vw;
+    height: 35vh;
+    border: 1px solid rgba(192, 192, 192, 1);
+    border-radius: 1.438rem;
+   }
+   .image_form_box{
+    margin-top: 0.2rem;
+    width: 77vw;
+    height: 12vh;
+    border: 1px solid rgba(192, 192, 192, 1);
+    border-radius: 1.438rem;
+   }
+   .price_form_box{
+    margin-top: 0.2rem;
+    width: 77vw;
+    height: 20vh;
+    border: 1px solid rgba(192, 192, 192, 1);
+    border-radius: 1.438rem;
+   }
+   .imformation_form_box_items{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+   }
+   .image_form_box_items{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    gap: 1rem;
+   }
+   .price_form_box_items{
+    margin-top: 1rem;
+    margin-left: 1rem;
+   }
+   form label{
+    color: rgba(185, 185, 185, 1);
+    font-size: 0.688rem;
+    font-weight: bold;
+   }
+   form input{
+    margin-top: 1rem;
+    width: 68vw;
+    height: 6vh;
+    border: 1px solid rgba(185, 185, 185, 1);
+    border-radius: 0.875rem;
+    padding-left: 1rem;
+   }
+   .description{
+    height: 15vh;
+   }
+   form button{
+    margin-top: 5vh;
+    margin-left: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 7rem;
+    height: 4.3vh;
+    border: 1px solid rgba(185, 185, 185, 1);
+    border-radius: 0.6rem;
+   }
+   form button:hover{
+    background-color: rgba(19, 169, 16, 1);
+    color: white;
+   }
+   .price_form_box_items form input{
+    width: 68vw;
+    height: 4vh;
+   }
+   .image_form_box_items form input{
+    width: 68vw;
+    height: 4vh;
+   }
+.button_addproduct button{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 92vw;
+    height: 5vh;
+    border-radius: 2rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-weight: bold;
+
+}
+.button_addproduct button:hover{
+    background-color: rgba(84, 201, 55, 1);
+    color: white;
+}
+}
