@@ -25,7 +25,7 @@ const page = () => {
         </div>
         <div className="screen5_button">
          <div className="screen5_button1">
-         <h2><Link><u>See Product</u></Link></h2>
+         <h2><Link href="/product"><u>See Product</u></Link></h2>
          <Image
          src={Arrow}
          alt='arrow-image'
@@ -33,7 +33,7 @@ const page = () => {
          className='arrow'
          />
          </div>
-         <h2 className="upload"><Link><u>Upload Products</u></Link></h2>
+         <h2 className="upload"><Link href="/addproduct"><u>Upload Products</u></Link></h2>
          <Image
          src={Arrow}
          alt='arrow-image'
