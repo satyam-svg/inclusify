@@ -1,0 +1,82 @@
+@media(max-width:600px){
+    .product_list{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: rgba(206, 206, 206, 1);
+    }
+   .addproduct_menu{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    gap: 1rem;
+   }
+   .addproduct_menu h2{
+    
+    color: rgba(0, 10, 255, 1);
+    font-weight: bold;
+   }
+   .addproduct_menu h4{
+    color: rgba(159, 159, 159, 1);
+    font-weight: bold;
+   }
+   .heading_addproduct{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   }
+   .heading_addproduct h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+   }
+   .heading_addproduct h2{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(163, 163, 163, 1);
+   }
+   .product_list_serial{
+     display: flex;
+     flex-direction: column;
+     margin-top: 2rem;
+     margin-left: 1rem;
+     gap: 2rem;
+   }
+   .box1_list{
+    width: 92vw;
+    height: 10vh;
+    background-color: white;
+    border-radius: 1rem;
+   }
+   .box_list_items{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    gap: 2rem;
+   }
+   .price_heading h1{
+    font-size: 0.875rem;
+    color: rgba(108, 108, 108, 1);
+    font-weight: bold;
+   }
+   .price_heading h2{
+    font-size: 0.75rem;
+    color: rgba(84, 201, 55, 1);
+    font-weight: bold;
+   }
+   .price_heading h3{
+    font-size: 2.5vw;
+    color: rgba(108, 108, 108, 1);
+    font-weight: bold;
+   }
+   .date h1{
+    font-size: 0.625rem;
+    color: rgba(108, 108, 108, 1);
+   }
+   .edit{
+       margin-left: 80vw;
+       position: relative;
+       bottom: 1rem;
+   }
+}
