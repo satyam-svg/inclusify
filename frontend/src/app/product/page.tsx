@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./product.css";
 import Cream from "./Image/cream.png";
 import nature from "./Image/natur.png";
@@ -29,6 +29,15 @@ import Facebook from "./Image/facebook.png";
 import Instagram from "./Image/instagram.png";
 import Twitter from "./Image/twitter.png";
 import Youtube from "./Image/youtube.png";
+interface ProductDetails {
+  image: string;
+  name: string;
+  price: number;
+  discountedPrice: number;
+  old_price: number;
+  title: String;
+}
+
 const page = () => {
   useEffect(() => {
     const swiper = new Swiper(".mySwiper", {
@@ -66,6 +75,41 @@ const page = () => {
       },
     });
   }, []);
+  const [productDetails, setProductDetails] = useState<ProductDetails[]>([]);
+  const generateImageUrl = (imagePath: any, width = 800) => {
+    return `/your-image-api?path=${encodeURIComponent(imagePath)}&w=${width}`;
+  };
+  const imageUrl = generateImageUrl(productDetails?.image);
+  console.log(imageUrl);
+  useEffect(() => {
+    const fetchProductDetails = async () => {
+      try {
+        const response = await fetch("http://127.0.0.1:8000/products/");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+  
+        console.log("API Response:", data);
+  
+        // Assuming the API response is an array of products
+        setProductDetails(data.map(product => ({
+          image: product.image,
+          name: product.name,
+          price: product.price,
+          discountedPrice: product.discountedPrice,
+          old_price: product.old_price,
+          title: product.title,
+        })));
+  
+      } catch (error) {
+        console.error("Error fetching product details:", error.message);
+      }
+    };
+  
+    fetchProductDetails();
+  }, []);
+
   return (
     <>
       <Script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></Script>
@@ -189,171 +233,58 @@ const page = () => {
                 <h2>Our Best Products</h2>
               </div>
               <section className="product-slider">
-                <div className="slider-btns">
-                  <div className="swiper-button-prev"></div>
-
-                  <div className="swiper-button-next"></div>
-                </div>
-                <div className="slider-container">
-                  <div className="swiper mySwiper">
-                    <div className="swiper-wrapper">
-                      <div className="swiper-slide">
-                        <div className="product-box">
-                          <span className="product-box-offer">-20%</span>
-
-                          <div className="product-img-container">
-                            <div className="product-img">
-                              <a href="http://demo47.askas8.se/sv/front-brake-assy-37-5-12-14">
-                                <Image
-                                  alt="loading-image"
-                                  className="product-img-front"
-                                  src={Cream}
-                                  priority
-                                />
-                              </a>
-                            </div>
-                          </div>
-
-                          <div className="product-box-text">
-                            <div className="product-category">
-                              <span>Cream</span>
-                            </div>
-
-                            <a
-                              href="http://demo47.askas8.se/sv/front-brake-assy-37-5-12-14"
-                              className="product-title"
-                            >
-                              Lorem ipsum dolor sit, amet consectetur
-                              adipisicing.
-                            </a>
-
-                            <div className="price-buy">
-                              <span className="p-price">1200$</span>
-                              <a
-                                href="http://demo47.askas8.se/sv/front-brake-assy-37-5-12-14"
-                                className="p-buy-btn"
-                              >
-                                Buy Now
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="swiper-slide">
-                        <div className="product-box">
-                          <span className="product-box-offer">-40%</span>
-
-                          <div className="product-img-container">
-                            <div className="product-img">
-                              <a href="#">
-                                <Image
-                                  alt="loading-image"
-                                  className="product-img-front"
-                                  src={Cream}
-                                  priority
-                                />
-                              </a>
-                            </div>
-                          </div>
-
-                          <div className="product-box-text">
-                            <div className="product-category">
-                              <span>Cream</span>
-                            </div>
-
-                            <a href="#" className="product-title">
-                              Lorem ipsum dolor sit, amet consectetur
-                              adipisicing.
-                            </a>
-
-                            <div className="price-buy">
-                              <span className="p-price">1100$</span>
-                              <a href="#" className="p-buy-btn">
-                                Buy Now
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="swiper-slide">
-                        <div className="product-box">
-                          <span className="product-box-offer">-60%</span>
-
-                          <div className="product-img-container">
-                            <div className="product-img">
-                              <a href="#">
-                                <Image
-                                  alt="loading-image"
-                                  className="product-img-front"
-                                  src={Cream}
-                                  priority
-                                />
-                              </a>
-                            </div>
-                          </div>
-
-                          <div className="product-box-text">
-                            <div className="product-category">
-                              <span>Cream</span>
-                            </div>
-
-                            <a href="#" className="product-title">
-                              Lorem ipsum dolor sit, amet consectetur
-                              adipisicing.
-                            </a>
-
-                            <div className="price-buy">
-                              <span className="p-price">1050$</span>
-                              <a href="#" className="p-buy-btn">
-                                Buy Now
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="swiper-slide">
-                        <div className="product-box">
-                          <span className="product-box-offer">-60%</span>
-
-                          <div className="product-img-container">
-                            <div className="product-img">
-                              <a href="#">
-                                <Image
-                                  alt="loading-image"
-                                  className="product-img-front"
-                                  src={Cream}
-                                  priority
-                                />
-                              </a>
-                            </div>
-                          </div>
-
-                          <div className="product-box-text">
-                            <div className="product-category">
-                              <span>Cream</span>
-                            </div>
-
-                            <a href="#" className="product-title">
-                              Lorem ipsum dolor sit, amet consectetur
-                              adipisicing.
-                            </a>
-
-                            <div className="price-buy">
-                              <span className="p-price">1200$</span>
-                              <a href="#" className="p-buy-btn">
-                                Buy Now
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <div className="slider-btns">
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+      </div>
+      <div className="slider-container">
+        <div className="swiper mySwiper">
+          <div className="swiper-wrapper">
+            {productDetails.map((product:any, index:any) => (
+              <div className="swiper-slide" key={index}>
+                <div className="product-box">
+                  <span className="product-box-offer">-20%</span>
+                  <div className="product-img-container">
+                    <div className="product-img">
+                      <a href={`http://demo47.askas8.se/sv/${product.slug}`}>
+                      <Image
+  alt="loading-image"
+  className="product-img-front"
+  src={`http://127.0.0.1:8000${decodeURIComponent(product?.image) || ""}`}
+  width={800}
+  height={800}
+  priority
+/>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="product-box-text">
+                    <div className="product-category">
+                      <span>{product.title}</span>
+                    </div>
+                    <a
+                      href={`http://demo47.askas8.se/sv/${product.slug}`}
+                      className="product-title"
+                    >
+                      {product.description}
+                    </a>
+                    <div className="price-buy">
+                      <span className="p-price">${product.price}</span>
+                      <a
+                        href={`http://demo47.askas8.se/sv/${product.slug}`}
+                        className="p-buy-btn"
+                      >
+                        Buy Now
+                      </a>
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
               <div className="sale_items">
                 <div className="subheading">
                   <h1>OUR BEST SELLERS</h1>
@@ -361,80 +292,49 @@ const page = () => {
                 </div>
                 <div className="sale_box">
                   <div className="sale_box1">
-                    <div className="sale_box_items">
-                      <Image
-                        alt="loading-image"
-                        className="product-img-front"
-                        src={Cream}
-                        priority
-                      />
-                      <h1>Food item</h1>
-                      <p>
-                        $543.6 <span>$543.6</span>
-                      </p>
-                    </div>
-                    <div className="sale_box_items">
-                      <Image
-                        alt="loading-image"
-                        className="product-img-front"
-                        src={Cream}
-                        priority
-                      />
-                      <h1>Food item</h1>
-                      <p>
-                        $543.6 <span>$543.6</span>
-                      </p>
-                    </div>
-                    <div className="sale_box_items">
-                      <Image
-                        alt="loading-image"
-                        className="product-img-front"
-                        src={Cream}
-                        priority
-                      />
-                      <h1>Food item</h1>
-                      <p>
-                        $543.6 <span>$543.6</span>
-                      </p>
-                    </div>
+                  {productDetails && productDetails.slice(0, 3).map((product:any, index:any) => (
+  <div className="sale_box_items" key={index}>
+    {product && (
+      <>
+        <Image
+          alt="loading-image"
+          className="product-img-front"
+          src={`http://127.0.0.1:8000${decodeURIComponent(product?.image) || ""}`}
+          priority
+          width={800}
+          height={800}
+        />
+        <h1>{product.title || "Loading..."}</h1>
+        <p>
+          ${product.price || 0} <span>${product.old_price || 0}</span>
+        </p>
+      </>
+    )}
+  </div>
+))}
+                      
                   </div>
                   <div className="sale_box1">
-                    <div className="sale_box_items">
-                      <Image
-                        alt="loading-image"
-                        className="product-img-front"
-                        src={Cream}
-                        priority
-                      />
-                      <h1>Food item</h1>
-                      <p>
-                        $543.6 <span>$543.6</span>
-                      </p>
-                    </div>
-                    <div className="sale_box_items">
-                      <Image
-                        alt="loading-image"
-                        className="product-img-front"
-                        src={Cream}
-                        priority
-                      />
-                      <h1>Food item</h1>
-                      <p>
-                        $543.6 <span>$543.6</span>
-                      </p>
-                    </div>
-                    <div className="sale_box_items">
-                      <Image
-                        alt="loading-image"
-                        className="product-img-front"
-                        src={Cream}
-                        priority
-                      />
-                      <h1>Food item</h1>
-                      <p>
-                        $543.6 <span>$543.6</span>
-                      </p>
-                    </div>
+                  {productDetails && productDetails.slice(3, 6).map((product:any, index:any) => (
+  <div className="sale_box_items" key={index}>
+    {product && (
+      <>
+        <Image
+          alt="loading-image"
+          className="product-img-front"
+          src={`http://127.0.0.1:8000${decodeURIComponent(product?.image) || ""}`}
+          priority
+          width={800}
+          height={800}
+        />
+        <h1>{product.title || "Loading..."}</h1>
+        <p>
+          ${product.price || 0} <span>${product.old_price || 0}</span>
+        </p>
+      </>
+    )}
+  </div>
+))}
                   </div>
                 </div>
               </div>
@@ -581,7 +481,7 @@ const page = () => {
           </div>
         </div>
         <div className="copyright_product">
-        <h1>© copyright inclusify All right reserved.</h1>
+          <h1>© copyright inclusify All right reserved.</h1>
         </div>
       </div>
     </>
